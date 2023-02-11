@@ -25,7 +25,7 @@ public class MouseMovement : MonoBehaviour
         {
             _rigidbody2D.AddForce(Vector2.left * speed);
 
-            if (!Physics2D.Raycast(leftPoint.position, Vector3.down, 0.5f))
+            if (!Physics2D.Raycast(leftPoint.position, Vector3.down, 0.5f) || Physics2D.Raycast(leftPoint.position, Vector3.left, 0.5f))
             {
                 _turnLeft = false;
             }
@@ -34,7 +34,7 @@ public class MouseMovement : MonoBehaviour
         {
             _rigidbody2D.AddForce(Vector2.right * speed);
 
-            if (!Physics2D.Raycast(rightPoint.position, Vector3.down, 0.5f))
+            if (!Physics2D.Raycast(rightPoint.position, Vector3.down, 0.5f) || Physics2D.Raycast(rightPoint.position, Vector3.right, 0.5f))
             {
                 _turnLeft = true;
             }
