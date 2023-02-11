@@ -350,7 +350,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &855849388
 GameObject:
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 855849391}
   - component: {fileID: 855849390}
   - component: {fileID: 855849389}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,8 +461,65 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1086908091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.030812616
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460788745276800142, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
+      propertyPath: m_Name
+      value: Mouse (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
 --- !u!1 &1610875266
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +531,7 @@ GameObject:
   - component: {fileID: 1610875269}
   - component: {fileID: 1610875268}
   - component: {fileID: 1610875267}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +629,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1460788745884250309
 PrefabInstance:
@@ -583,11 +640,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3125923
+      value: 4.11
       objectReference: {fileID: 0}
     - target: {fileID: 1460788745276800136, guid: 93b0ccb0d5a8a29409e47d43adf19969, type: 3}
       propertyPath: m_LocalPosition.y

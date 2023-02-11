@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1460788744293226194}
   - component: {fileID: 1460788744293226205}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1460788744532991028}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1460788744928659641}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 1460788745276800137}
   - component: {fileID: 1460788745276800138}
   - component: {fileID: 1460788745276800139}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,6 +198,9 @@ MonoBehaviour:
   speed: 5
   leftPoint: {fileID: 1460788744928659641}
   rightPoint: {fileID: 1460788744532991028}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!50 &1460788745276800138
 Rigidbody2D:
   serializedVersion: 4
