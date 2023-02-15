@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class PlayerVisualChanger : MonoBehaviour
 {
-    [SerializeField] private Sprite[] sprites;
+    [SerializeField] private Material[] materials;
 
-    private int _currentSpriteIndex;
+    private int _currentMaterialIndex;
     private SpriteRenderer _spriteRenderer;
 
     private void Start()
@@ -21,16 +21,16 @@ public class PlayerVisualChanger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            _currentSpriteIndex -= 1;
-            _currentSpriteIndex += sprites.Length;
-            _currentSpriteIndex %= sprites.Length;
+            _currentMaterialIndex -= 1;
+            _currentMaterialIndex += materials.Length;
+            _currentMaterialIndex %= materials.Length;
             
             UpdateSprite();
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            _currentSpriteIndex += 1;
-            _currentSpriteIndex %= sprites.Length;
+            _currentMaterialIndex += 1;
+            _currentMaterialIndex %= materials.Length;
             
             UpdateSprite();
         }
@@ -38,6 +38,6 @@ public class PlayerVisualChanger : MonoBehaviour
 
     private void UpdateSprite()
     {
-        _spriteRenderer.sprite = sprites[_currentSpriteIndex];
+        _spriteRenderer.material = materials[_currentMaterialIndex];
     }
 }
