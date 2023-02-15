@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class PlayerVisualChanger : MonoBehaviour
 {
     [SerializeField] private Material[] materials;
@@ -24,14 +25,14 @@ public class PlayerVisualChanger : MonoBehaviour
             _currentMaterialIndex -= 1;
             _currentMaterialIndex += materials.Length;
             _currentMaterialIndex %= materials.Length;
-            
+
             UpdateSprite();
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             _currentMaterialIndex += 1;
             _currentMaterialIndex %= materials.Length;
-            
+
             UpdateSprite();
         }
     }
