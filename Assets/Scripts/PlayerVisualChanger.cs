@@ -8,14 +8,22 @@ public class PlayerVisualChanger : MonoBehaviour
 {
     [SerializeField] private Material[] materials;
 
+    [SerializeField] private PlayerMovement playerMovement;
+
     private int _currentMaterialIndex;
     private SpriteRenderer _spriteRenderer;
 
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        
+        UpdateMaterial();
 
-        UpdateSprite();
+        playerMovement.OnMoveLeft += (sender, args) =>
+            _spriteRenderer.flipX = true;
+
+        playerMovement.OnMoveRight += (sender, args) =>
+            _spriteRenderer.flipX = false;
     }
 
     private void Update()
@@ -26,18 +34,18 @@ public class PlayerVisualChanger : MonoBehaviour
             _currentMaterialIndex += materials.Length;
             _currentMaterialIndex %= materials.Length;
 
-            UpdateSprite();
+            UpdateMaterial();
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             _currentMaterialIndex += 1;
             _currentMaterialIndex %= materials.Length;
 
-            UpdateSprite();
+            UpdateMaterial();
         }
     }
 
-    private void UpdateSprite()
+    private void UpdateMaterial()
     {
         _spriteRenderer.material = materials[_currentMaterialIndex];
     }

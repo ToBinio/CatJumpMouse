@@ -7,8 +7,11 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(PlayerCollisionDetector))]
 public class PlayerMovement : MonoBehaviour
 {
+    public event EventHandler OnMoveLeft;
+    public event EventHandler OnMoveRight;
+
     private Rigidbody2D _rigidbody2D;
-    private PlayerCollisionDetector _playerCollisionDetector; 
+    private PlayerCollisionDetector _playerCollisionDetector;
     [SerializeField] private float movingSpeed = 110;
     [SerializeField] private float jumpHeight = 2500;
 
@@ -24,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         if (_playerCollisionDetector.touchesGround) _jumpCount = 0;
-        
+
         if (!Input.GetKeyDown(KeyCode.Space)) return;
         if (_jumpCount >= 1) return;
         _shouldJump = true;
@@ -36,11 +39,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             _rigidbody2D.AddForce(Vector2.left * movingSpeed);
+            OnMoveLeft?.Invoke(this, EventArgs.Empty);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             _rigidbody2D.AddForce(Vector2.right * movingSpeed);
+            OnMoveRight?.Invoke(this, EventArgs.Empty);
         }
 
         if (!_shouldJump) return;
