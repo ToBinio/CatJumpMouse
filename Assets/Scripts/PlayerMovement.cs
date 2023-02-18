@@ -62,7 +62,8 @@ public class PlayerMovementNew : MonoBehaviour
 
     private void Flip()
     {
-        if (!_isFacingRight)
+        if ((!_isFacingRight || !(_horizontal < 0f)) && (_isFacingRight || !(_horizontal > 0f))) return;
+        if (_isFacingRight)
         {
             OnMoveLeft?.Invoke(this, EventArgs.Empty);
         }
@@ -70,15 +71,7 @@ public class PlayerMovementNew : MonoBehaviour
         {
             OnMoveRight?.Invoke(this, EventArgs.Empty);
         }
-        
-        if (_isFacingRight && _horizontal < 0f || !_isFacingRight && _horizontal > 0f)
-        {
-            _isFacingRight = !_isFacingRight;
-            var transform1 = transform;
-            var localScale = transform1.localScale;
-            localScale.x *= -1f;
-            transform1.localScale = localScale;
-        }
+        _isFacingRight = !_isFacingRight;
     }
 
     private bool IsGrounded()
