@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementNew : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     private float _horizontal;
@@ -18,7 +18,6 @@ public class PlayerMovementNew : MonoBehaviour
     public event EventHandler OnMoveLeft;
     public event EventHandler OnMoveRight;
     
-    private bool _canDoubleJump = false;
     private const int MaxJumps = 1;
     private int _jumpsRemaining = MaxJumps;
 
@@ -34,7 +33,6 @@ public class PlayerMovementNew : MonoBehaviour
             }
             else {
                 rb.velocity = new Vector2(rb.velocity.x, JumpingPower * 0.8f);
-                _canDoubleJump = false;
             }
             _jumpsRemaining--;
         }
@@ -42,13 +40,12 @@ public class PlayerMovementNew : MonoBehaviour
         if (IsGrounded())
         {
             _jumpsRemaining = MaxJumps;
-            _canDoubleJump = true;
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             var velocity = rb.velocity;
-            velocity = new Vector2(velocity.x, velocity.y * 0.5f);
+            velocity = new Vector2(velocity.x, velocity.y * 0.2f);
             rb.velocity = velocity;
         }
     

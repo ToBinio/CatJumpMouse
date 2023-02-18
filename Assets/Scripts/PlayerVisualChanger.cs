@@ -8,7 +8,7 @@ public class PlayerVisualChanger : MonoBehaviour
 {
     [SerializeField] private Material[] materials;
 
-    [SerializeField] private PlayerMovementNew playerMovement;
+    [SerializeField] private PlayerMovement playerMovement;
 
     private int _currentMaterialIndex;
     private SpriteRenderer _spriteRenderer;
