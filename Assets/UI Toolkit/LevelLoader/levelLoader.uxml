@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/LevelLoader/levelLoader.uss?fileID=7433441132597879392&amp;guid=3f7959f3875e1a14e800088e46d985dc&amp;type=3#levelLoader" />
+    <ui:VisualElement style="background-color: rgb(255, 255, 255); width: 100%; height: 100%; flex-direction: row; flex-wrap: wrap; flex-basis: auto; align-items: flex-start; justify-content: space-around;">
+        <ui:Button text="Level 1" display-tooltip-when-elided="true" name="level0" class="levelButton" />
+        <ui:Button text="Level 2" display-tooltip-when-elided="true" name="level1" class="levelButton" />
+    </ui:VisualElement>
+</ui:UXML>

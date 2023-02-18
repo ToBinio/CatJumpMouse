@@ -1361,6 +1361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 770967413}
   - component: {fileID: 770967414}
+  - component: {fileID: 770967415}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -1403,7 +1404,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1e1beb1df059b56408ed764fbd1a2021, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1424,17 +1425,41 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa75cbf8ea35a1f4b9cbea8b91d79681, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.25, y: 0.9375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &770967415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770967412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c367da053ab76074aa152cb2aca1fa8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 295e387d5bf9c114b98b9c1720cbf26f, type: 2}
+  - {fileID: 2100000, guid: 250a9e7e566af1a41a42af8f557f72e0, type: 2}
+  - {fileID: 2100000, guid: ea320b7a60bef8f4aa272508a9f154dd, type: 2}
+  - {fileID: 2100000, guid: 39fa1c6cecb0d1449abf9325279ada36, type: 2}
+  - {fileID: 2100000, guid: 902a14970c0e2f4409b2925694c70924, type: 2}
+  - {fileID: 2100000, guid: 0bb9c71238212b348887ac3464baf55b, type: 2}
+  - {fileID: 2100000, guid: 948bbafd03aba564d9936e9ac2413503, type: 2}
+  - {fileID: 2100000, guid: 4c280c9fff445eb498114484549b5755, type: 2}
+  - {fileID: 2100000, guid: 78d65a4ff976ef6419718021cc9a6860, type: 2}
+  - {fileID: 2100000, guid: 1e1beb1df059b56408ed764fbd1a2021, type: 2}
+  playerMovement: {fileID: 1254093753}
 --- !u!1 &776645731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,7 +1787,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0018332005, y: -0.0641624}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1773,7 +1798,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.128325, y: 0.8056795}
   m_EdgeRadius: 0
 --- !u!114 &1254093756
 MonoBehaviour:
